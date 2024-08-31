@@ -81,9 +81,7 @@ class checkoutpage {
         
         cy.wait(2000);
         
-        //cy.get('#orderModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').should('be.visible');
-        //cy.xpath(locators.checkouttest.button('Purchase')).should('be.visible');
-        //cy.get('#orderModal > .modal-dialog > .modal-content > .modal-footer > .btn-secondary').should('be.visible');
+       
     }
     inputNamaCustomer(customer_name) {
         cy.xpath(locators.checkouttest.name).type(customer_name)
@@ -115,7 +113,6 @@ class checkoutpage {
             this.inputYear(order_year)
         }
         this.clickpurchasebutton()
-        //this.verifyalertsuccessPurchase()
     }
 
      

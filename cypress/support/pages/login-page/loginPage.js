@@ -50,9 +50,6 @@ class loginPage {
          this.verifyAlertAppears(staticVars.error_message_login.nouser_registered)
      }
 
-    // verifySignUpSuccessMessageAppears() {
-    //     this.verifyAlertAppears(staticVars.success_message.signup)
-    // }
 
     logIn(username, password) {
         if (username != '') {
