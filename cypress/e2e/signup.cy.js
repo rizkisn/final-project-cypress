@@ -1,36 +1,29 @@
+const signupPage = require('../support/pages/signup-page/signupPage');
+const base = require('../support/pages/base');
 const homePage = require('../support/pages/home-page/homePage')
+const random = require('../support/pages/randomize')
 
 describe("Signup", () => {
     beforeEach(() => {
-        // pre step
-        
-        
+        base.openurl()
+        homePage.verifyHomePageAppears()
+        signupPage.clickSignUpMenu()
+        signupPage.verifySignUpModalAppears()
     })
 
     it("with unregistered data", () => {
-        homePage.goToHomePage()
-        homePage.verifyHomePageAppears()
-        homePage.clickSignUpMenu()
-        homePage.verifySignUpModalAppears()
-        homePage.signUp('', 'jojo123')
-        homePage.verifyEmptyCredsErrorMessageAppears()
+        signupPage.signUp('', '456rsn')
+        signupPage.verifyEmptyCredsErrorMessageAppears()
     })
 
     it("with empty data", () => {
-        homePage.goToHomePage()
-        homePage.verifyHomePageAppears()
-        homePage.clickSignUpMenu()
-        homePage.verifySignUpModalAppears()
-        homePage.signUp('', 'jojo123')
-        homePage.verifyEmptyCredsErrorMessageAppears()
+        signupPage.signUp('', '')
+        signupPage.verifyEmptyCredsErrorMessageAppears()
     })
 
     it("with registered data", () => {
-        homePage.goToHomePage()
-        homePage.verifyHomePageAppears()
-        homePage.clickSignUpMenu()
-        homePage.verifySignUpModalAppears()
-        homePage.signUp('random', 'jojo123')
-        homePage.verifySignUpSuccessMessageAppears()
+        signupPage.signUp(random.email(), random.password())
+        signupPage.verifySignUpSuccessMessageAppears()
     })
+    
 })

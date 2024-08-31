@@ -1,12 +1,11 @@
 module.exports = {
-    datatestid: {
+    logintest: {
         imageCompanyLogo: '//*[@id="nava"]',
-        categori: '//*[@id="cat"]',
         nameofUser: '//*[@id="nameofuser"]',
-        narvbark: '//*[@id="narvbarx"]',
-        bodyproduk: '//*[@id="tbodyid"]',
-        footbar: '//*[@id="footc"]',
+        login: '//*[@id="login2"]',
+        logout: '//*[@id="logout2"]',
+        username: '//*[@id="loginusername"]',
+        password: '//*[@id="loginpassword"]',
         button: (buttonType) => `//*[@type="button" and contains(text(), '${buttonType}')]`
     }
 }
-

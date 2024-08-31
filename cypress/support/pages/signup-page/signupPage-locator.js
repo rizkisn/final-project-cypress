@@ -1,12 +1,11 @@
 module.exports = {
     datatestid: {
         imageCompanyLogo: '//*[@id="nava"]',
-        categori: '//*[@id="cat"]',
+        menusignup: '//*[@id="signin2"]',
         nameofUser: '//*[@id="nameofuser"]',
-        narvbark: '//*[@id="narvbarx"]',
-        bodyproduk: '//*[@id="tbodyid"]',
-        footbar: '//*[@id="footc"]',
+        username: '//*[@id="sign-username"]',
+        password: '//*[@id="sign-password"]',
+        formsignup: '//*[@id="signInModalLabel"]',
         button: (buttonType) => `//*[@type="button" and contains(text(), '${buttonType}')]`
     }
 }
-
